@@ -17,7 +17,13 @@ var component_3 = Vue.extend({
   template: '<ul><li>react</li> </ul>',
 });
 
-Vue.component('Saludo', component_1);
+Vue.component('Saludo', {
+  methods: {
+    display(){
+      console.log('display')
+    }
+  }
+});
 Vue.component('titulo', component_2);
 Vue.component('frameworks', component_3);
 
