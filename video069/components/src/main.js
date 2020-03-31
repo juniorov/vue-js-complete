@@ -19,7 +19,16 @@ var component_2 = Vue.extend({
   }
 });
 var component_3 = Vue.extend({
-  template: '<ul><li>react</li> </ul>',
+  template: '<div><ul><lista v-for="fw in frameworks" :key="fw.id">{{ fw.titulo }}</lista> </ul></div>',
+  data(){
+    return {
+      frameworks: [
+        { id: 1, titulo: 'uno' },
+        { id: 2, titulo: 'dos' },
+        { id: 3, titulo: 'tres' },
+      ]
+    }
+  }
 });
 
 Vue.component('saludo', {
@@ -36,6 +45,9 @@ Vue.component('saludo', {
 });
 Vue.component('titulo', component_2);
 Vue.component('frameworks', component_3);
+Vue.component('lista', {
+  template: '<li><slot></slot></li>',
+});
 
 
 /* eslint-disable no-new */
