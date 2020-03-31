@@ -11,13 +11,23 @@ var component_1 = Vue.extend({
   template: '<h1>Intro </h1>',
 });
 var component_2 = Vue.extend({
-  template: '<h3>Lista Framworsk </h3>',
+  template: '<h3>{{ subtitle }}</h3>',
+  data(){
+    return {
+      subtitle: 'Lista Framworsk'
+    }
+  }
 });
 var component_3 = Vue.extend({
   template: '<ul><li>react</li> </ul>',
 });
 
-Vue.component('Saludo', {
+Vue.component('saludo', {
+  data(){
+    return {
+      titulo: 'Hola mundo'
+    }
+  },
   methods: {
     display(){
       console.log('display')
