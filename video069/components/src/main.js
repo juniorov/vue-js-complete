@@ -6,7 +6,7 @@ import App from './App'
 Vue.config.productionTip = false
 
 //Componentes
-
+/*
 var component_1 = Vue.extend({
   template: '<h1>Intro </h1>',
 });
@@ -47,11 +47,12 @@ Vue.component('titulo', component_2);
 Vue.component('frameworks', component_3);
 Vue.component('lista', {
   template: '<li><slot></slot></li>',
-});
+});*/
 
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-
+  components: { App },
+  template: '<App />'
 })
