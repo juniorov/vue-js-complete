@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <button @click="contar">{{ contador }}</button>
-    </div>
+    <button @click="contar">{{ contador }}</button>
 </template>
 <script>
     export default {
