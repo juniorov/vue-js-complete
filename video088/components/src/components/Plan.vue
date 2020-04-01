@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="plan">
+        <div @click="seleccionar" class="plan" :class="{ 'plan-activo':selected}">
             <div class="descripcion">
             <span class="titulo">{{ nombre }}</span>
             </div>
@@ -16,9 +16,19 @@
                 default: 'Plan 1',
                 required: true
             },
-            precio:Number
+        },
+        data(){
+            return {
+                selected: false
+            }
+        },
+        methods:{
+            seleccionar(){
+                /** Crea un evento personalizado para enviar datos al padre */
+                this.$emit('select', this.nombre);
+                this.selected = !this.selected;
+            }
         }
-        // props:['nombre']
     }
 </script>
 <style>
